@@ -1,0 +1,12 @@
+import { createRequire } from 'node:module';
+const require = createRequire(import.meta.url);
+const ExcelJS = require('exceljs');
+const E = require('../engine.js');
+const X = require('../export.js');
+const ex = require('./example.json');
+const out = process.argv[2] || 'tests/out_example.xlsx';
+const cfg = process.argv[3] ? require(process.argv[3]) : ex;
+const A = E.analyze(cfg, process.argv[4] || 'Base');
+const wb = X.buildWorkbook(ExcelJS, cfg, A, process.argv[4] || 'Base');
+await wb.xlsx.writeFile(out);
+console.log('wrote', out, wb.worksheets.map((w) => w.name).join(', '));

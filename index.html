@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Etch Spend Forecast Builder</title>
+  <meta name="description" content="Enter programs, drivers and an AOP, and the builder generates the forecast, variance, bridge, scenarios, depreciation and checks, then exports a live-formula Excel workbook. Illustrative numbers.">
+  <meta name="theme-color" content="#092f33">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23092f33'/%3E%3Cpath d='M7 22V10h4v8h4v-5h4v9z' fill='%23c8e6dc'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div>
+      <h1>Etch Spend Forecast Builder</h1>
+      <p class="sub">Illustrative numbers. Runs in your browser; nothing is uploaded.</p>
+    </div>
+    <div class="actions">
+      <a class="link" href="https://kambourr.github.io/Jacob-Kambour-Website/work/etch-portfolio-forecast/" target="_blank" rel="noopener noreferrer">Case study ↗</a>
+      <button class="btn" id="btn-example" type="button">Load Etch example</button>
+      <button class="btn primary" id="btn-export" type="button">Export Excel ↓</button>
+    </div>
+  </header>
+  <main class="layout">
+    <div class="col" id="col-in">
+      <p class="col-title">Inputs</p>
+      <div id="inputs"></div>
+    </div>
+    <div class="col" id="col-out" aria-live="polite">
+      <p class="col-title">Results (update as you type)</p>
+      <div id="results"></div>
+    </div>
+  </main>
+  <footer class="foot">
+    <p>Independent project with illustrative numbers. Not Applied Materials data. Not affiliated with or endorsed by Applied Materials.</p>
+    <p>The calculations match the Excel model in the case study. The exported workbook has live formulas; open it in Excel and let it recalculate. Inputs are saved only in this browser.</p>
+  </footer>
+  <script src="vendor/exceljs.min.js"></script>
+  <script src="example.js"></script>
+  <script src="engine.js"></script>
+  <script src="export.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

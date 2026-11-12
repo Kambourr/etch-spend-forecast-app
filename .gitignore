@@ -1,0 +1,7 @@
+node_modules/
+tests/out_*
+tests/*_calc/
+tests/exp_*.json
+tests/expected_*.json
+tests/cfg_*.json
+.DS_Store

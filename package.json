@@ -1,0 +1,17 @@
+{
+  "name": "etch-spend-forecast-app",
+  "version": "1.0.0",
+  "description": "Browser app that generates an Etch Opex and Capex forecast from inputs and exports a live-formula Excel workbook.",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node tests/test_engine.mjs"
+  },
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "devDependencies": {
+    "exceljs": "^4.4.0"
+  },
+  "private": true
+}
